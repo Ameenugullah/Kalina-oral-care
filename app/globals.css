@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,6 +13,10 @@
   --white: #FFFFFF;
   --turquoise: #64DEB9;
   --deep-twilight: #0C0766;
+
+  /* Typography */
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 /* ========================================
@@ -25,9 +31,60 @@ html {
 body {
   background: var(--white);
   color: var(--deep-twilight);
-  font-family: 'Manrope Variable', system-ui, sans-serif;
+  font-family: var(--font-body);
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+/* Strong, modern display typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+/* Main hero heading */
+
+h1 {
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+/* Section headings */
+
+h2 {
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+/* Supporting headings */
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+/* Form controls inherit the website's body font */
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-body);
 }
 
 /* Accessible keyboard focus */
